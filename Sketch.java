@@ -4,7 +4,8 @@ public class Sketch extends PApplet {
 	
 	
   /**
-   * Called once at the beginning of execution, put your size all in this method
+   * A program that uses nested loops to draw sqaures in a 4x4 grid
+   * @author: Gabriel Jaja
    */
   public void settings() {
 	  // put your size call here
@@ -159,19 +160,68 @@ public class Sketch extends PApplet {
    * Do NOT use 'if' statements to complete 5-8. Manipulate the loops instead
    */
   public void draw_section5() {
+    int intX = 0;
+    int intY = 0;
 
+    for (int intRow = 0; intRow < 30; intRow++) { 
+      for (int intColumn = 30; intColumn > intRow; intColumn--) {
+        intX = 3 + 290 - intRow * 10;  // Instead of zero, calculate the proper intX location using 'intRow'
+        intY = -7 + intColumn * 10; // Instead of zero, calculate the proper intY location using 'intColumn'
+
+        fill(255);
+        noStroke();
+        rect(intX, intY, 5, 5);
+      }
+    }
   }
 
   public void draw_section6() {
+    int intX = 0;
+    int intY = 0;
 
+    for (int intRow = 0; intRow < 30; intRow++) { 
+      for (int intColumn = 30; intColumn > intRow; intColumn--) {
+        intX = 3 + intRow * 10 + 300;  // Instead of zero, calculate the proper intX location using 'intRow'
+        intY = -7 + intColumn * 10; // Instead of zero, calculate the proper intY location using 'intColumn'
+
+        fill(255);
+        noStroke();
+        rect(intX, intY, 5, 5);
+      }
+    }
   }
 
   public void draw_section7() {
+    int intX = 0;
+    int intY = 0;
 
+    for (int intRow = 0; intRow < 30; intRow++) { 
+      for (int intColumn = 0; intColumn < 30 - intRow; intColumn++) {
+        intX = 3 + intRow * 10 + 600; // Instead of zero, calculate the proper intX location using 'intRow'
+        intY = 3 + 300 + intColumn * 10 - 300; // Instead of zero, calculate the proper intY location using 'intColumn'
+
+        fill(255);
+        noStroke();
+        rect(intX, intY, 5, 5);
+      }
+    }
   }
   
   public void draw_section8() {
+    int intX = 0;
+    int intY = 0;
 
+    for (int intRow = 0; intRow <= 30; intRow++) { 
+      for (int intColumn = 0; intRow >= intColumn; intColumn++) {
+        intX = -7 + intRow * 10 + 300 + 300 + 300; // Instead of zero, calculate the proper intX location using 'intRow'
+        intY = -7 + intColumn * 10 + 300 - 300; // Instead of zero, calculate the proper intY location using 'intColumn'
+
+      
+        fill(255);
+        noStroke();
+        rect(intX, intY, 5, 5);
+      }
+    }
   }
 
 }
